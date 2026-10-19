@@ -44,8 +44,10 @@
 
             <!-- Drawing 1 -->
             <div class="drawing-card bg-white p-6 rounded-[2rem] border-4 border-pink-400 shadow-md flex flex-col items-center">
-                <div class="w-full h-48 bg-pink-100 rounded-3xl flex items-center justify-center text-8xl mb-4 border-2 border-dashed border-pink-300">
-                    <img src="Vishnu.jpeg" alt="Lord Vishnu" width="400">
+                <!-- Added overflow-hidden to the box so the image doesn't spill out -->
+                <div class="w-full h-48 bg-pink-100 rounded-3xl flex items-center justify-center text-8xl mb-4 border-2 border-dashed border-pink-300 overflow-hidden">
+                    <!-- Added object-cover, w-full, h-full, and the onclick event -->
+                    <img src="Vishnu.jpeg" alt="Lord Vishnu" class="w-full h-full object-cover cursor-pointer hover:scale-110 transition-transform duration-300" onclick="openModal(this.src)">
                 </div>
                 <h2 class="text-2xl text-pink-600 font-bold text-center">Lord Vishnu</h2>
                 <p class="text-gray-500 text-center mt-2">Lord Vishnu looking surprised by the ghastly act of killing Dushasana by Bheema in Mahabharata.</p>
@@ -53,7 +55,7 @@
 
             <!-- Drawing 2 -->
             <div class="drawing-card bg-white p-6 rounded-[2rem] border-4 border-blue-400 shadow-md flex flex-col items-center">
-                <div class="w-full h-48 bg-blue-100 rounded-3xl flex items-center justify-center text-8xl mb-4 border-2 border-dashed border-blue-300">
+                <div class="w-full h-48 bg-blue-100 rounded-3xl flex items-center justify-center text-8xl mb-4 border-2 border-dashed border-blue-300 overflow-hidden">
                     🚀
                 </div>
                 <h2 class="text-2xl text-blue-600 font-bold text-center">Super Fast Spaceship</h2>
@@ -62,7 +64,7 @@
 
             <!-- Drawing 3 -->
             <div class="drawing-card bg-white p-6 rounded-[2rem] border-4 border-green-400 shadow-md flex flex-col items-center">
-                <div class="w-full h-48 bg-green-100 rounded-3xl flex items-center justify-center text-8xl mb-4 border-2 border-dashed border-green-300">
+                <div class="w-full h-48 bg-green-100 rounded-3xl flex items-center justify-center text-8xl mb-4 border-2 border-dashed border-green-300 overflow-hidden">
                     🐸
                 </div>
                 <h2 class="text-2xl text-green-600 font-bold text-center">A Happy Frog</h2>
@@ -71,7 +73,7 @@
 
             <!-- Drawing 4 -->
             <div class="drawing-card bg-white p-6 rounded-[2rem] border-4 border-purple-400 shadow-md flex flex-col items-center">
-                <div class="w-full h-48 bg-purple-100 rounded-3xl flex items-center justify-center text-8xl mb-4 border-2 border-dashed border-purple-300">
+                <div class="w-full h-48 bg-purple-100 rounded-3xl flex items-center justify-center text-8xl mb-4 border-2 border-dashed border-purple-300 overflow-hidden">
                     🦄
                 </div>
                 <h2 class="text-2xl text-purple-600 font-bold text-center">Sparkle the Unicorn</h2>
@@ -80,7 +82,7 @@
 
             <!-- Drawing 5 -->
             <div class="drawing-card bg-white p-6 rounded-[2rem] border-4 border-orange-400 shadow-md flex flex-col items-center">
-                <div class="w-full h-48 bg-orange-100 rounded-3xl flex items-center justify-center text-8xl mb-4 border-2 border-dashed border-orange-300">
+                <div class="w-full h-48 bg-orange-100 rounded-3xl flex items-center justify-center text-8xl mb-4 border-2 border-dashed border-orange-300 overflow-hidden">
                     🍔
                 </div>
                 <h2 class="text-2xl text-orange-600 font-bold text-center">Giant Burger</h2>
@@ -89,7 +91,7 @@
 
             <!-- Drawing 6 -->
             <div class="drawing-card bg-white p-6 rounded-[2rem] border-4 border-teal-400 shadow-md flex flex-col items-center">
-                <div class="w-full h-48 bg-teal-100 rounded-3xl flex items-center justify-center text-8xl mb-4 border-2 border-dashed border-teal-300">
+                <div class="w-full h-48 bg-teal-100 rounded-3xl flex items-center justify-center text-8xl mb-4 border-2 border-dashed border-teal-300 overflow-hidden">
                     🤖
                 </div>
                 <h2 class="text-2xl text-teal-600 font-bold text-center">Homework Robot</h2>
@@ -103,6 +105,32 @@
     <footer class="text-center mt-16 text-gray-500 font-bold">
         <p>Made with ❤️ by a 10 year old.</p>
     </footer>
+
+    <!-- POPUP MODAL SECTION (Hidden by default) -->
+    <div id="imageModal" class="hidden fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4 backdrop-blur-sm" onclick="closeModal()">
+        <!-- Close Button (X) -->
+        <span class="absolute top-4 right-6 text-white text-5xl cursor-pointer hover:text-pink-400 transition-colors font-bold">&times;</span>
+        
+        <!-- The big popup image -->
+        <img id="modalImg" src="" class="max-w-full max-h-[90vh] rounded-2xl border-8 border-white shadow-2xl" onclick="event.stopPropagation()">
+    </div>
+
+    <!-- JAVASCRIPT FOR THE POPUP -->
+    <script>
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImg');
+
+        // Function to open the popup when an image is clicked
+        function openModal(imageSrc) {
+            modalImg.src = imageSrc; // Set the popup image to be the one we clicked
+            modal.classList.remove('hidden'); // Show the popup
+        }
+
+        // Function to close the popup when the X or background is clicked
+        function closeModal() {
+            modal.classList.add('hidden'); // Hide the popup again
+        }
+    </script>
 
 </body>
 </html>
