@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Drawings</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for a playful, kid-friendly look -->
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Comic Neue', cursive;
+            background-color: #fdf2f8; /* Soft pink background */
+            background-image: radial-gradient(#fbcfe8 2px, transparent 2px);
+            background-size: 30px 30px;
+        }
+        .drawing-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .drawing-card:hover {
+            transform: translateY(-10px) rotate(2deg);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="min-h-screen pb-12">
+
+    <!-- Header Section -->
+    <header class="text-center pt-16 pb-12 px-4">
+        <div class="inline-block bg-white px-8 py-4 rounded-full shadow-lg border-4 border-yellow-400 transform -rotate-2">
+            <h1 class="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500">
+                i am 10 and these are my drawings ✨
+            </h1>
+        </div>
+        <p class="mt-6 text-xl text-gray-700 font-bold bg-white/80 inline-block px-4 py-2 rounded-2xl">
+            Welcome to my art gallery! I hope you like them! 🎨
+        </p>
+    </header>
+
+    <!-- Gallery Grid -->
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+
+            <!-- Drawing 1 -->
+            <div class="drawing-card bg-white p-6 rounded-[2rem] border-4 border-pink-400 shadow-md flex flex-col items-center">
+                <div class="w-full h-48 bg-pink-100 rounded-3xl flex items-center justify-center text-8xl mb-4 border-2 border-dashed border-pink-300">
+                    🦖
+                </div>
+                <h2 class="text-2xl text-pink-600 font-bold text-center">My Dinosaur</h2>
+                <p class="text-gray-500 text-center mt-2">His name is Bob and he likes eating leaves.</p>
+            </div>
+
+            <!-- Drawing 2 -->
+            <div class="drawing-card bg-white p-6 rounded-[2rem] border-4 border-blue-400 shadow-md flex flex-col items-center">
+                <div class="w-full h-48 bg-blue-100 rounded-3xl flex items-center justify-center text-8xl mb-4 border-2 border-dashed border-blue-300">
+                    🚀
+                </div>
+                <h2 class="text-2xl text-blue-600 font-bold text-center">Super Fast Spaceship</h2>
+                <p class="text-gray-500 text-center mt-2">Going to Mars to find aliens!</p>
+            </div>
+
+            <!-- Drawing 3 -->
+            <div class="drawing-card bg-white p-6 rounded-[2rem] border-4 border-green-400 shadow-md flex flex-col items-center">
+                <div class="w-full h-48 bg-green-100 rounded-3xl flex items-center justify-center text-8xl mb-4 border-2 border-dashed border-green-300">
+                    🐸
+                </div>
+                <h2 class="text-2xl text-green-600 font-bold text-center">A Happy Frog</h2>
+                <p class="text-gray-500 text-center mt-2">I saw him in the pond behind my house.</p>
+            </div>
+
+            <!-- Drawing 4 -->
+            <div class="drawing-card bg-white p-6 rounded-[2rem] border-4 border-purple-400 shadow-md flex flex-col items-center">
+                <div class="w-full h-48 bg-purple-100 rounded-3xl flex items-center justify-center text-8xl mb-4 border-2 border-dashed border-purple-300">
+                    🦄
+                </div>
+                <h2 class="text-2xl text-purple-600 font-bold text-center">Sparkle the Unicorn</h2>
+                <p class="text-gray-500 text-center mt-2">She has rainbow hair and can fly.</p>
+            </div>
+
+            <!-- Drawing 5 -->
+            <div class="drawing-card bg-white p-6 rounded-[2rem] border-4 border-orange-400 shadow-md flex flex-col items-center">
+                <div class="w-full h-48 bg-orange-100 rounded-3xl flex items-center justify-center text-8xl mb-4 border-2 border-dashed border-orange-300">
+                    🍔
+                </div>
+                <h2 class="text-2xl text-orange-600 font-bold text-center">Giant Burger</h2>
+                <p class="text-gray-500 text-center mt-2">I was really hungry when I drew this.</p>
+            </div>
+
+            <!-- Drawing 6 -->
+            <div class="drawing-card bg-white p-6 rounded-[2rem] border-4 border-teal-400 shadow-md flex flex-col items-center">
+                <div class="w-full h-48 bg-teal-100 rounded-3xl flex items-center justify-center text-8xl mb-4 border-2 border-dashed border-teal-300">
+                    🤖
+                </div>
+                <h2 class="text-2xl text-teal-600 font-bold text-center">Homework Robot</h2>
+                <p class="text-gray-500 text-center mt-2">I wish he was real so he could do my math.</p>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center mt-16 text-gray-500 font-bold">
+        <p>Made with ❤️ by a 10 year old.</p>
+    </footer>
+
+</body>
+</html>
