@@ -44,9 +44,7 @@
 
             <!-- Drawing 1 -->
             <div class="drawing-card bg-white p-6 rounded-[2rem] border-4 border-pink-400 shadow-md flex flex-col items-center">
-                <!-- Added overflow-hidden to the box so the image doesn't spill out -->
                 <div class="w-full h-48 bg-pink-100 rounded-3xl flex items-center justify-center text-8xl mb-4 border-2 border-dashed border-pink-300 overflow-hidden">
-                    <!-- Added object-cover, w-full, h-full, and the onclick event -->
                     <img src="Vishnu.jpeg" alt="Lord Vishnu" class="w-full h-full object-cover cursor-pointer hover:scale-110 transition-transform duration-300" onclick="openModal(this.src)">
                 </div>
                 <h2 class="text-2xl text-pink-600 font-bold text-center">Lord Vishnu</h2>
@@ -56,46 +54,19 @@
             <!-- Drawing 2 -->
             <div class="drawing-card bg-white p-6 rounded-[2rem] border-4 border-blue-400 shadow-md flex flex-col items-center">
                 <div class="w-full h-48 bg-blue-100 rounded-3xl flex items-center justify-center text-8xl mb-4 border-2 border-dashed border-blue-300 overflow-hidden">
-                    🚀
+                    <img src="Krishna.jpeg" alt="Lord Krishna" class="w-full h-full object-cover cursor-pointer hover:scale-110 transition-transform duration-300" onclick="openModal(this.src)">
                 </div>
-                <h2 class="text-2xl text-blue-600 font-bold text-center">Super Fast Spaceship</h2>
-                <p class="text-gray-500 text-center mt-2">Going to Mars to find aliens!</p>
+                <h2 class="text-2xl text-blue-600 font-bold text-center">Lord Krishna</h2>
+                <p class="text-gray-500 text-center mt-2">My beautiful drawing of Lord Krishna.</p>
             </div>
 
             <!-- Drawing 3 -->
             <div class="drawing-card bg-white p-6 rounded-[2rem] border-4 border-green-400 shadow-md flex flex-col items-center">
                 <div class="w-full h-48 bg-green-100 rounded-3xl flex items-center justify-center text-8xl mb-4 border-2 border-dashed border-green-300 overflow-hidden">
-                    🐸
+                    <img src="BTS Butter.jpeg" alt="BTS Butter" class="w-full h-full object-cover cursor-pointer hover:scale-110 transition-transform duration-300" onclick="openModal(this.src)">
                 </div>
-                <h2 class="text-2xl text-green-600 font-bold text-center">A Happy Frog</h2>
-                <p class="text-gray-500 text-center mt-2">I saw him in the pond behind my house.</p>
-            </div>
-
-            <!-- Drawing 4 -->
-            <div class="drawing-card bg-white p-6 rounded-[2rem] border-4 border-purple-400 shadow-md flex flex-col items-center">
-                <div class="w-full h-48 bg-purple-100 rounded-3xl flex items-center justify-center text-8xl mb-4 border-2 border-dashed border-purple-300 overflow-hidden">
-                    🦄
-                </div>
-                <h2 class="text-2xl text-purple-600 font-bold text-center">Sparkle the Unicorn</h2>
-                <p class="text-gray-500 text-center mt-2">She has rainbow hair and can fly.</p>
-            </div>
-
-            <!-- Drawing 5 -->
-            <div class="drawing-card bg-white p-6 rounded-[2rem] border-4 border-orange-400 shadow-md flex flex-col items-center">
-                <div class="w-full h-48 bg-orange-100 rounded-3xl flex items-center justify-center text-8xl mb-4 border-2 border-dashed border-orange-300 overflow-hidden">
-                    🍔
-                </div>
-                <h2 class="text-2xl text-orange-600 font-bold text-center">Giant Burger</h2>
-                <p class="text-gray-500 text-center mt-2">I was really hungry when I drew this.</p>
-            </div>
-
-            <!-- Drawing 6 -->
-            <div class="drawing-card bg-white p-6 rounded-[2rem] border-4 border-teal-400 shadow-md flex flex-col items-center">
-                <div class="w-full h-48 bg-teal-100 rounded-3xl flex items-center justify-center text-8xl mb-4 border-2 border-dashed border-teal-300 overflow-hidden">
-                    🤖
-                </div>
-                <h2 class="text-2xl text-teal-600 font-bold text-center">Homework Robot</h2>
-                <p class="text-gray-500 text-center mt-2">I wish he was real so he could do my math.</p>
+                <h2 class="text-2xl text-green-600 font-bold text-center">BTS Butter</h2>
+                <p class="text-gray-500 text-center mt-2">Smooth like butter! Inspired by my favorite BTS song.</p>
             </div>
 
         </div>
@@ -120,15 +91,13 @@
         const modal = document.getElementById('imageModal');
         const modalImg = document.getElementById('modalImg');
 
-        // Function to open the popup when an image is clicked
         function openModal(imageSrc) {
-            modalImg.src = imageSrc; // Set the popup image to be the one we clicked
-            modal.classList.remove('hidden'); // Show the popup
+            modalImg.src = imageSrc; 
+            modal.classList.remove('hidden'); 
         }
 
-        // Function to close the popup when the X or background is clicked
         function closeModal() {
-            modal.classList.add('hidden'); // Hide the popup again
+            modal.classList.add('hidden'); 
         }
     </script>
 
